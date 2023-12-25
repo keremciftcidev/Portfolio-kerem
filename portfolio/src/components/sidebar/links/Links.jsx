@@ -1,16 +1,18 @@
+import { motion } from "framer-motion";
 
 
 const Links = () => {
   const items = ["Homepage", "Services", "Portfolio", "Contact", "About"];
 
   return (
-    <div className="links">
+    <motion.div className="links">
       {items.map((item) => (
-        <a href={`#${item}`} key={item}>
+        <motion.a href={`#${item}`} key={item} whileHover={{scale:1.1}} whileTap={{scale:0.95}}>
           {item}
-        </a>
+          
+        </motion.a>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

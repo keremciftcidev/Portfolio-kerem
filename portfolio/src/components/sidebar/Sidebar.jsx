@@ -5,6 +5,7 @@ import "./sidebar.scss";
 import { useState } from "react";
 
 const Sidebar = () => {
+
   const [open, setOpen] = useState(false);
 
   const variants = {
