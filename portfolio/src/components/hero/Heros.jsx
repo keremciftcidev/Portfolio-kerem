@@ -14,14 +14,27 @@ const textVariants = {
       staggerChildren: 0.1,
     },
   },
-  scrollButton:{
-    opacity:0,
-    y:10,
-    transition:{
-        duration:2,
-        repeat:Infinity
-    }
-  }
+  scrollButton: {
+    opacity: 0,
+    y: 10,
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+    },
+  },
+};
+const sliderVariants = {
+  initial: {
+    x: 0,
+  },
+  animate: {
+    x: "-220%",
+
+    transition: {
+      repeat: Infinity,
+      duration: 20,
+    },
+  },
 };
 
 const Heros = () => {
@@ -44,10 +57,22 @@ const Heros = () => {
             </motion.button>
             <motion.button variants={textVariants}>Contact Me</motion.button>
           </motion.div>
-          <motion.img variants={textVariants} animate="scrollButton" src="/scroll.png" alt="" />
+          <motion.img
+            variants={textVariants}
+            animate="scrollButton"
+            src="/scroll.png"
+            alt=""
+          />
         </motion.div>
       </div>
-      <div className="slidingTextContainer">Software Developer</div>
+      <motion.div
+        className="slidingTextContainer"
+        variants={sliderVariants}
+        initial="initial"
+        animate="animate"
+      >
+        Software developer
+      </motion.div>
       <div className="imageContainer">
         <img src="/herok1.png" alt="" />
       </div>
